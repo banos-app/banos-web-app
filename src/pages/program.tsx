@@ -4,6 +4,20 @@ import Head from "next/head";
 import { Header, Container, Breadcrums, ButtonOutlined } from "../components";
 
 export default function Home() {
+  const links = [
+    { href: "/", title: "Home" },
+    { href: "/", title: "Banos" },
+    { href: "/", title: "Activities" },
+    { href: "/", title: "Rafting" },
+  ];
+
+  const tags = [
+    { title: "Location", description: "Rio blanco" },
+    { title: "Duration", description: "1/2 day" },
+    { title: "Min age", description: "18 years" },
+    { title: "Min pax", description: "min 2" },
+  ];
+
   return (
     <div>
       <Head>
@@ -11,14 +25,8 @@ export default function Home() {
       </Head>
       <Header />
       <Container size="md">
-        <Breadcrums
-          links={[
-            { href: "/", title: "Home" },
-            { href: "/", title: "Banos" },
-            { href: "/", title: "Activities" },
-            { href: "/", title: "Rafting" },
-          ]}
-        />
+        <Breadcrums links={links} />
+
         <div className="lg:flex lg:justify-between mb-8">
           <div>
             <h1 className="text-gray-700 text-5xl font-semibold mb-2">
@@ -26,32 +34,16 @@ export default function Home() {
             </h1>
             {/* tags */}
             <div className="grid grid-cols-4 lg:flex mb-8 lg:mb-0">
-              <div className="mr-4">
-                <div className="inline-block font-semibold text-gray-600">
-                  Location:
-                </div>{" "}
-                <div className="inline-block text-gray-400">
-                  Rio Blanco, Banos
+              {tags.map((tag) => (
+                <div className="mr-4">
+                  <div className="inline-block font-semibold text-gray-600">
+                    {tag.title}:
+                  </div>{" "}
+                  <div className="inline-block text-gray-400">
+                    {tag.description}
+                  </div>
                 </div>
-              </div>
-              <div className="mr-4">
-                <div className="inline-block font-semibold text-gray-600">
-                  Duration:
-                </div>{" "}
-                <div className="inline-block text-gray-400">1/2 day</div>
-              </div>
-              <div className="mr-4">
-                <div className="inline-block font-semibold text-gray-600">
-                  Min age:
-                </div>{" "}
-                <div className="inline-block text-gray-400">18+</div>
-              </div>
-              <div className="mr-4">
-                <div className="inline-block font-semibold text-gray-600">
-                  Passengers:
-                </div>{" "}
-                <div className="inline-block text-gray-400">Min 2</div>
-              </div>
+              ))}
             </div>
           </div>
           <div className="flex">
@@ -135,7 +127,7 @@ export default function Home() {
       </Container>
 
       <Container size="lg">
-        <div className="relative lg:rounded-3xl w-full h-3/4 lg:h-[650px] py-16 overflow-hidden">
+        <div className="relative mb-8 rounded-3xl w-full lg:w-full h-[300px] lg:h-[500px] lg:mb-0 m-auto overflow-hidden">
           <div className="absolute z-0 top-0 left-0 w-full h-full ">
             <img
               src="https://v1.nitrocdn.com/PlCATPkBFeOnftDsPDvpHIHaHyykpjHs/assets/static/optimized/rev-77f359a/wp-content/uploads/2016/06/extreme-canyoning-banos-ecuador4-960x640.jpg"
@@ -144,11 +136,13 @@ export default function Home() {
             />
           </div>
 
-          <div className="absolute z-10 top-0 left-0 w-full h-full bg-black opacity-60"></div>
+          <div className="absolute z-10 top-0 left-0 w-full h-full bg-black lg:opacity-60 opacity-10"></div>
         </div>
+      </Container>
 
-        <div className="relative z-20 m-auto bg-white w-10/12 lg:w-8/12 lg:h-[100px] lg:-mt-[50px] shadow-md rounded-3xl mb-16 grid grid-cols-4">
-          <div className="flex items-center px-8 border-r border-gray-100">
+      <Container size="md">
+        <div className="relative mb-8 z-20 m-auto bg-white w-full py-4 lg:py-0 lg:h-[100px] lg:-mt-[50px] border border-gray-200 lg:border-0 lg:shadow-md rounded-3xl lg:grid lg:grid-cols-4">
+          <div className="flex items-center px-8 py-2 lg:py-0 lg:border-r lg:border-gray-100">
             <div className="mr-4 text-gray-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +168,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex items-center px-8 border-r border-gray-100">
+          <div className="flex items-center px-8 py-2 lg:py-0 lg:border-r lg:border-gray-100">
             <div className="mr-4 text-gray-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +190,7 @@ export default function Home() {
               <div className="text-gray-700 text-xl">MM / DD / YY</div>
             </div>
           </div>
-          <div className="flex items-center px-8">
+          <div className="flex items-center px-8 py-2 lg:py-0 lg:border-r lg:border-gray-100">
             <div className="mr-4 text-gray-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +214,7 @@ export default function Home() {
               <div className="text-gray-700 text-xl">5 persons</div>
             </div>
           </div>
-          <div className="flex items-center px-8">
+          <div className="flex items-center px-8 py-2 lg:py-0">
             <div className="inline-flex items-center justify-center font-semibold h-12 bg-red-400 hover:bg-red-600 active:bg-red-800 cursor-pointer text-white w-full rounded-full select-none">
               Buy now
             </div>

@@ -5,7 +5,7 @@ export function Header() {
   return (
     <div className="bg-white border-b shadow-sm mb-8">
       <Container size="md">
-        <div className="flex justify-between align-center py-4">
+        <div className="flex justify-between items-center h-[56px]">
           <div>
             <Link href="/">
               <a className="group">
@@ -19,7 +19,22 @@ export function Header() {
               </a>
             </Link>
           </div>
-          <div>Menu</div>
+          <div className="flex align-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 10h16M4 14h16M4 18h16"
+              />
+            </svg>
+          </div>
         </div>
       </Container>
     </div>
