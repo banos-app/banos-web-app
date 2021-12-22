@@ -19,7 +19,7 @@ export function Jumbo() {
       <div className="absolute z-10 top-0 left-0 w-full h-full bg-black opacity-60"></div>
       <div className="relative top-0 left-0 w-full h-full z-0">
         <img
-          src="http://www.hostalerupcion.com/en/images/banos-ecuador/hiking-banos-ecuador.jpg"
+          src="https://v1.nitrocdn.com/PlCATPkBFeOnftDsPDvpHIHaHyykpjHs/assets/static/optimized/rev-77f359a/wp-content/uploads/2016/06/white-water-rafting-banos-ecuador2-960x640.jpg"
           alt="cover"
           className="w-full absolute top-1/2 -translate-y-1/2"
         />
