@@ -127,7 +127,7 @@ export default function Home() {
       </Container>
 
       <Container size="lg">
-        <div className="relative mb-8 rounded-3xl w-full lg:w-full h-[300px] lg:h-[500px] lg:mb-0 m-auto overflow-hidden">
+        <div className="relative mb-8 rounded-3xl w-full lg:w-full h-[200px] lg:h-[500px] lg:mb-0 m-auto overflow-hidden">
           <div className="absolute z-0 top-0 left-0 w-full h-full ">
             <img
               src="https://v1.nitrocdn.com/PlCATPkBFeOnftDsPDvpHIHaHyykpjHs/assets/static/optimized/rev-77f359a/wp-content/uploads/2016/06/extreme-canyoning-banos-ecuador4-960x640.jpg"
