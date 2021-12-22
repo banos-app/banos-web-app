@@ -2,16 +2,16 @@ import React from 'react';
 
 export function Jumbo() {
   return (
-    <div className="relative rounded-3xl w-full h-[650px] pt-16 overflow-hidden">
+    <div className="relative lg:rounded-3xl w-full h-3/4 lg:h-[650px] py-16 overflow-hidden">
       <div className="relative z-20 flex items-start justify-center w-full">
         <div className="text-white text-center">
-          <div className="mb-2 text-2xl font-light text-gray-300 text-shadow">
+          <div className="mb-2 text-xl lg:text-2xl font-light text-gray-300 text-shadow">
             All you need is Banos de Agua Santa
           </div>
-          <h1 className="mb-10 text-6xl font-semibold text-shadow">
+          <h1 className="mb-10 text-4xl lg:text-6xl font-semibold text-shadow">
             Explore the most beautiful places
           </h1>
-          <div className="text-4xl font-normal text-gray-gray-300 text-shadow">
+          <div className="text-2xl lg:text-4xl font-normal text-gray-gray-300 text-shadow">
             La Casa del Arbol
           </div>
         </div>
