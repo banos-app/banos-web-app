@@ -19,7 +19,7 @@ export function Jumbo() {
       <div className="absolute z-10 top-0 left-0 w-full h-full bg-black opacity-60"></div>
       <div className="relative top-0 left-0 w-full h-full z-0">
         <img
-          src="https://images.squarespace-cdn.com/content/v1/56daf4c8d51cd4224e4154cb/1545680371690-HOTYSA32D4FW7HH2AHL3/GOPR0766.JPG"
+          src="http://www.hostalerupcion.com/en/images/banos-ecuador/hiking-banos-ecuador.jpg"
           alt="cover"
           className="w-full absolute top-1/2 -translate-y-1/2"
         />

@@ -12,7 +12,7 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
-      <div className="w-9/12 m-auto b mt-16">
+      <div className="w-full lg:w-9/12 m-auto b mt-16">
         <Jumbo />
         <JumboFrom />
         <h2 className="text-center text-3xl mb-8">
@@ -27,6 +27,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
+        sfdsfd
       </div>
     </div>
   );
