@@ -187,7 +187,16 @@ export default function Home() {
             </div>
             <div>
               <div className="text-gray-400 text-sm font-light">Date:</div>
-              <div className="text-gray-700 text-xl">MM / DD / YY</div>
+              <div className="text-gray-700 text-xl">
+                <input
+                  type="date"
+                  id="start"
+                  name="trip-start"
+                  value="2018-07-22"
+                  min="2018-01-01"
+                  max="2018-12-31"
+                />
+              </div>
             </div>
           </div>
           <div className="flex items-center px-8 py-2 lg:py-0 lg:border-r lg:border-gray-100">
@@ -211,7 +220,16 @@ export default function Home() {
               <div className="text-gray-400 text-sm font-light">
                 How many people:
               </div>
-              <div className="text-gray-700 text-xl">5 persons</div>
+              <div className="text-gray-700 text-xl">
+                <select name="pets">
+                  <option value="dog">1 person</option>
+                  <option value="cat">2 persons</option>
+                  <option value="cat">3 persons</option>
+                  <option value="cat">4 persons</option>
+                  <option value="cat">5 persons</option>
+                  <option value="cat">6 persons</option>
+                </select>
+              </div>
             </div>
           </div>
           <div className="flex items-center px-8 py-2 lg:py-0">
