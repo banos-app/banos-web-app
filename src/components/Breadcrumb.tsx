@@ -37,8 +37,7 @@ export function Breadcrums({ links }: Props) {
       </Link>
       <div className="flex text-gray-400 transition font-semibold">
         {links.map((link, index) => (
-          <>
-            <Link href={link.href}>
+            <Link href={link.href} key={index}>
               <a className="flex items-center">
                 <div className="ml-1 lg:ml-4 hover:text-red-400">{link.title}</div>
                 {links.length - 1 !== index && (
@@ -61,7 +60,6 @@ export function Breadcrums({ links }: Props) {
                 )}
               </a>
             </Link>
-          </>
         ))}
       </div>
     </div>

@@ -4,7 +4,7 @@ import { Container } from "./Container";
 export function Header() {
   return (
     <div className="bg-white border-b shadow-sm mb-8">
-      <Container isMin>
+      <Container size="md">
         <div className="flex justify-between align-center py-4">
           <div>
             <Link href="/">
@@ -19,7 +19,7 @@ export function Header() {
               </a>
             </Link>
           </div>
-          <div>Texr</div>
+          <div>Menu</div>
         </div>
       </Container>
     </div>

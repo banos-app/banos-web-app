@@ -1,16 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
-import faker from "faker";
 
-import {
-  Header,
-  Jumbo,
-  JumboFrom,
-  Container,
-  Breadcrums,
-  ButtonOutlined,
-} from "../components";
+import { Header, Container, Breadcrums, ButtonOutlined } from "../components";
 
 export default function Home() {
   return (
@@ -19,7 +10,7 @@ export default function Home() {
         <title>Create Next App</title>
       </Head>
       <Header />
-      <Container>
+      <Container size="md">
         <Breadcrums
           links={[
             { href: "/", title: "Home" },
@@ -28,13 +19,13 @@ export default function Home() {
             { href: "/", title: "Rafting" },
           ]}
         />
-        <div className="flex justify-between mb-8">
+        <div className="lg:flex lg:justify-between mb-8">
           <div>
             <h1 className="text-gray-700 text-5xl font-semibold mb-2">
               Canyoning en Baños Ecuador
             </h1>
             {/* tags */}
-            <div className="flex">
+            <div className="grid grid-cols-4 lg:flex mb-8 lg:mb-0">
               <div className="mr-4">
                 <div className="inline-block font-semibold text-gray-600">
                   Location:
@@ -55,91 +46,95 @@ export default function Home() {
                 </div>{" "}
                 <div className="inline-block text-gray-400">18+</div>
               </div>
+              <div className="mr-4">
+                <div className="inline-block font-semibold text-gray-600">
+                  Passengers:
+                </div>{" "}
+                <div className="inline-block text-gray-400">Min 2</div>
+              </div>
             </div>
           </div>
-          <div>
-            <div className="flex">
-              <ButtonOutlined
-                icon={
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
-                    />
-                  </svg>
-                }
-              />
-              <ButtonOutlined
-                className="ml-2"
-                icon={
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                }
-              />
-              <ButtonOutlined
-                className="ml-2"
-                icon={
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                    />
-                  </svg>
-                }
-              />
-              <ButtonOutlined
-                className="ml-2"
-                icon={
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                    />
-                  </svg>
-                }
-              />
-            </div>
+          <div className="flex">
+            <ButtonOutlined
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                  />
+                </svg>
+              }
+            />
+            <ButtonOutlined
+              className="ml-2"
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              }
+            />
+            <ButtonOutlined
+              className="ml-2"
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                  />
+                </svg>
+              }
+            />
+            <ButtonOutlined
+              className="ml-2"
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                  />
+                </svg>
+              }
+            />
           </div>
         </div>
       </Container>
 
-      <Container isMin>
+      <Container size="lg">
         <div className="relative lg:rounded-3xl w-full h-3/4 lg:h-[650px] py-16 overflow-hidden">
           <div className="absolute z-0 top-0 left-0 w-full h-full ">
             <img
